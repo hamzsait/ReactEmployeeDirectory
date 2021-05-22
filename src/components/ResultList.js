@@ -14,4 +14,4 @@ function ResultList(props) {
   );
 }
 
-export default ResultList;
+export default ResultList

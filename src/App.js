@@ -1,8 +1,8 @@
 import React from "react";
-import SearchResultContainer from "./components/SearchResultContainer";
+import Table from './components/Table'
 
 function App() {
-  return <SearchResultContainer />;
+  return <Table/>
 }
 
 export default App;

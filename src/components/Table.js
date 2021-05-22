@@ -2,7 +2,7 @@ import { Component } from "react";
 import API from "../utils/API";
 import ResultFrame from "./ResultFrame";
 
-class Test extends Component {
+class Table extends Component {
 
   state = {
       results: {}
@@ -40,4 +40,4 @@ class Test extends Component {
   }
 }
 
-export default Test
+export default Table

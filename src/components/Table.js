@@ -1,7 +1,7 @@
+import React from "react";
 import { Component } from "react";
 import API from "../utils/API";
 import ResultFrame from "./ResultFrame";
-import React from "react"
 
 class Table extends Component {
 

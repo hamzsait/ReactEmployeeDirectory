@@ -2,7 +2,7 @@ import React from "react";
 import {Table} from "react"
 import ResultList from "./ResultList";
 
-function SearchForm(props) {
+function ResultsFrame(props) {
   return (
     <div>
       <h1> Hello </h1>
@@ -23,4 +23,4 @@ function SearchForm(props) {
   );
 }
 
-export default SearchForm;
+export default ResultsFrame;

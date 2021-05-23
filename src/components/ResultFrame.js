@@ -1,5 +1,5 @@
 import React from "react";
-import {Table} from "react"
+import {Table} from "react-bootstrap";
 import ResultList from "./ResultList";
 
 function ResultFrame(props) {
@@ -9,14 +9,13 @@ function ResultFrame(props) {
       <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Photo</th>
         </tr>
       </thead>
       <tbody>
-        <ResultList/>
+        <ResultList value = {props}/>
       </tbody>
       </Table>
     </div>

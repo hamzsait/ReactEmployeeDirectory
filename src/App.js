@@ -1,8 +1,8 @@
 import React from "react";
-import Table from './components/Table'
+import TableList from './components/TableList'
 
 function App() {
-  return <Table/>
+  return <TableList/>
 }
 
 export default App;

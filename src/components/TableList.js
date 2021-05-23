@@ -3,7 +3,7 @@ import { Component } from "react";
 import API from "../utils/API";
 import ResultFrame from "./ResultFrame";
 
-class Table extends Component {
+class TableList extends Component {
 
   state = {
       results: {}
@@ -16,9 +16,7 @@ class Table extends Component {
   returnData = async () => {
     API.search()
       .then(res => {
-          console.log(res)
           this.setState({results : res.data.results})
-          console.log(this.state.results)
       })
       .catch(err => console.log(err));
   };
@@ -41,4 +39,4 @@ class Table extends Component {
   }
 }
 
-export default Table
+export default TableList

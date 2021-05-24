@@ -9,8 +9,8 @@ function ResultFrame(props) {
       <Table striped bordered hover>
       <thead>
         <tr>
-            <th onClick = {() => props.sortByName()} >Name</th>
-            <th onClick = {() => props.sortByEmail()}>Email</th>
+            <th onClick = {() => props.sortByName()}> Name </th>
+            <th onClick = {() => props.sortByEmail()}> Email </th>
             <th>Photo</th>
         </tr>
       </thead>

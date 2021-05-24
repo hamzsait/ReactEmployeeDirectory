@@ -12,7 +12,7 @@ function ResultFrame(props) {
           <MDBCol id = 'search' md="6">
             <form onSubmit = {props.blocker} className="form-inline mt-4 mb-4">
               <MDBIcon icon="search" />
-              <input id = 'searchText' className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search By Name" aria-label="Search" />
+              <input onKeyPress = {(key) => props.checkEnter(key.key, document.getElementById('searchText'))} id = 'searchText' className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search By Name" aria-label="Search" />
             </form>
           </MDBCol>
           <Button type = 'button' onClick = {() => props.getSearchResults(document.getElementById('searchText'))} id = "searchButton">Search</Button>

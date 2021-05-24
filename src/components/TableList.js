@@ -60,6 +60,12 @@ class TableList extends Component {
       this.setState({results: output})
   }
 
+  checkEnter = (key, item)=> {
+    if(key == "Enter"){
+      this.getSearchResults(item)
+    }
+  }
+
   blocker = item => {
     item.preventDefault()
   }
@@ -67,13 +73,13 @@ class TableList extends Component {
   render(){
     if (this.state.results.length > 0){
         return (
-            <ResultFrame blocker = {this.blocker} getSearchResults = {this.getSearchResults} sortByEmail = {this.sortByEmail} sortByName = {this.sortByName} value = {this.state.results}/>
+            <ResultFrame checkEnter = {this.checkEnter} blocker = {this.blocker} getSearchResults = {this.getSearchResults} sortByEmail = {this.sortByEmail} sortByName = {this.sortByName} value = {this.state.results}/>
         )
     }
     else {
         return (
             <div>
-                <h1> Loading... </h1>
+                <h1> No Results </h1>
             </div>
         )
     }

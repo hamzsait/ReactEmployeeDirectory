@@ -7,6 +7,7 @@ class TableList extends Component {
 
   state = {
       results: {},
+      originalResults: {},
       alphaNameTrue: true,
       alphaEmailTrue: true
   }
@@ -19,6 +20,7 @@ class TableList extends Component {
     API.search()
       .then(res => {
           this.setState({results : res.data.results})
+          this.setState({originalResults : res.data.results})
       })
       .catch(err => console.log(err));
   }
@@ -46,11 +48,26 @@ class TableList extends Component {
     }
   }
 
+  getSearchResults = searchTerm => {
+      let output = []
+      searchTerm = String(searchTerm.value).toUpperCase()
+      this.state.originalResults.forEach( result => {
+        if ((result.name.first.toUpperCase()).includes(searchTerm) || (result.name.first.toUpperCase()).includes(searchTerm)){
+          output.push(result)
+        }
+      })
+
+      this.setState({results: output})
+  }
+
+  blocker = item => {
+    item.preventDefault()
+  }
+
   render(){
     if (this.state.results.length > 0){
-        console.log(this.state.results)
         return (
-            <ResultFrame sortByEmail = {this.sortByEmail} sortByName = {this.sortByName} value = {this.state.results}/>
+            <ResultFrame blocker = {this.blocker} getSearchResults = {this.getSearchResults} sortByEmail = {this.sortByEmail} sortByName = {this.sortByName} value = {this.state.results}/>
         )
     }
     else {

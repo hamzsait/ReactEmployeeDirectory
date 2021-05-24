@@ -1,0 +1,8 @@
+#header{
+    display: flex;
+    font-size: 30px;
+}
+
+#search{
+    margin-left: 100px;
+}

@@ -21,8 +21,8 @@ function ResultFrame(props) {
       <Table striped bordered hover>
       <thead>
         <tr>
-            <th onClick = {() => props.sortByName()}> Name </th>
-            <th onClick = {() => props.sortByEmail()}> Email </th>
+            <th onClick = {() => props.sortByName()}> Name <img width='30' height='30' src = "UpDownArrows.png"></img> </th>
+            <th onClick = {() => props.sortByEmail()}> Email <img width='30' height='30' src = "UpDownArrows.png"></img> </th>
             <th>Photo</th>
         </tr>
       </thead>

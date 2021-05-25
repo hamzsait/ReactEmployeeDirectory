@@ -79,7 +79,7 @@ class TableList extends Component {
     else {
         return (
             <div>
-                <h1> No Results </h1>
+                <ResultFrame value = {null}/>
             </div>
         )
     }
